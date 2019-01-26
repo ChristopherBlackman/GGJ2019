@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Assets/Buttons/Card/Card_Theme.tres" type="Theme" id=1]
-[ext_resource path="res://Scenes/Card.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Cards/Theme/Card_Theme.tres" type="Theme" id=1]
+[ext_resource path="res://Scenes/Cards/Card.gd" type="Script" id=2]
 [ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Bath.png" type="Texture" id=3]
 [ext_resource path="res://icon.png" type="Texture" id=4]
 
@@ -34,10 +34,12 @@ title = "Default"
 about_text = "THIS IS A CARD"
 image = ExtResource( 3 )
 cycles = 1
-spawn_time = 1
+expire_log_msg = "bad event happend"
+action_log_msg = "Card Preformed Action"
+spawn_time = 1.#QNAN
 expire_time = 3
-nextCardExpire = null
-nextCardNonExpire = null
+nextCardExpire = ""
+nextCardNonExpire = ""
 
 [node name="Picture" type="TextureRect" parent="." index="0"]
 

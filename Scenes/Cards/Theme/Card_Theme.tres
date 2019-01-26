@@ -1,6 +1,6 @@
 [gd_resource type="Theme" load_steps=2 format=2]
 
-[ext_resource path="res://Assets/Buttons/Card/card_styleboxtexture.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scenes/Cards/Theme/card_styleboxtexture.tres" type="StyleBox" id=1]
 
 [resource]
 
@@ -12,7 +12,7 @@ Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = ExtResource( 1 )
-Button/styles/hover = null
+Button/styles/hover = ExtResource( 1 )
 Button/styles/normal = ExtResource( 1 )
 Button/styles/pressed = ExtResource( 1 )
 _sections_unfolded = [ "Button", "Button/styles", "Resource" ]
