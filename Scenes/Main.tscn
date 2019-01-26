@@ -108,5 +108,8 @@ _sections_unfolded = [ "Size Flags" ]
 margin_right = 100.0
 margin_bottom = 130.0
 text = "THIS IS A CARD"
+title = "Default"
+about_text = "about"
+image = null
 
 

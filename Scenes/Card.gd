@@ -1,9 +1,10 @@
 extends Button
 
-export var type = "DEFAULT"
-export var about_text = "THIS IS A CARD"
-export var cycles = 1
-export var spawn_time = 1
+export (String) var title = "Default"
+export var about_text = "about"
+export (Texture) var image
+export (int) var cycles = 1
+export (int) var spawn_time = 1
 
 # class member variables go here, for example:
 # var a = 2
@@ -12,6 +13,7 @@ export var spawn_time = 1
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
+	#self.get_child("Picture").
 	pass
 
 #func _process(delta):
