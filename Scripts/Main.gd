@@ -1,9 +1,20 @@
-extends Node2D
+extends Control
 
-# Called when the node enters the scene tree for the first time.
+var root_node = self
+
+var card_scene = load("res://Scenes/Card.tscn")
+
+var deck = []
+
 func _ready():
-	pass # Replace with function body.
+	#var base_card = card_scene.instance()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	#deck.append(base_card)
+	print("loading")
+	load_cards()
+
+
+func load_cards():
+	var base_card = card_scene.instance()
+
+#func spawn_deck():
