@@ -14,6 +14,7 @@ func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
 	#self.get_child("Picture").
+	$Picture.texture = self.image
 	pass
 
 #func _process(delta):
