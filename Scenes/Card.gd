@@ -5,26 +5,32 @@ export var about_text = "about"
 export (Texture) var image
 export (int) var cycles = 1
 export (int) var spawn_time = 1
+export (int) var expire_time = 3
+var current_cycle = 1
+export (String) var nextCardExpire
+export (String) var nextCardNonExpire
 
 func _ready():
-	# Called when the node is added to the scene for the first time.
-	# Initialization here
-	#self.get_child("Picture").
+
 	$Picture.texture = self.image
 	pass
 
-#func _process(delta):
-#	# Called every frame. Delta is time since last frame.
-#	# Update game logic here.
-#	pass
+func next_cycle():
+	current_cycle += 1
+	if current_cycle >= expire_time:
+		self.next_card(nextCardExpire)
+
+func next_card(card):
+	var res = load(isNextCard)
+	# call rootlnode or something !!
 
 
 func _on_Button_pressed():
 	print("Card Pressed")
-	pass # replace with function body
+	self.nextCard(card)
 
 
 
 func _on_Button_mouse_entered():
 	print("Mouse Enterted")
-	pass # replace with function body
+	#display card on the info screen
