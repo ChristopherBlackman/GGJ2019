@@ -1,12 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Logger/Logger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Cards/Bath.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Cards/Bed.tscn" type="PackedScene" id=5]
 
-[node name="Main" type="Control" index="0" groups=[
+[node name="Main" type="Control" groups=[
 "CardManager",
 ]]
 
@@ -63,7 +61,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 952.0
-margin_bottom = 402.0
+margin_bottom = 532.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -80,7 +78,7 @@ anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_right = 279.0
-margin_bottom = 402.0
+margin_bottom = 532.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -101,7 +99,7 @@ anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 406.0
+margin_top = 536.0
 margin_right = 952.0
 margin_bottom = 536.0
 rect_pivot_offset = Vector2( 0, 0 )
@@ -112,18 +110,5 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 alignment = 0
 _sections_unfolded = [ "Size Flags" ]
-
-[node name="Card" parent="GUI/Frame/Cards" index="0" instance=ExtResource( 4 )]
-
-margin_right = 100.0
-margin_bottom = 130.0
-spawn_time = 1.#QNAN
-
-[node name="Bed" parent="GUI/Frame/Cards" index="1" instance=ExtResource( 5 )]
-
-margin_left = 104.0
-margin_right = 204.0
-margin_bottom = 130.0
-spawn_time = 1.#QNAN
 
 

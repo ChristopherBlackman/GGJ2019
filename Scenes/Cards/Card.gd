@@ -31,6 +31,8 @@ export (String) var nextCardNonExpire = ""
 
 func _ready():
 	print("Creating : "+title)
+	print("expires : "+nextCardExpire)
+	print("action  : "+nextCardNonExpire)
 	$Picture.texture = self.image
 	pass
 
@@ -55,7 +57,6 @@ func next_cycle():
 # talks to cardManager and sends next card scene for next cycle
 func next_card(card):
 	print("next_card " + title + " : " + card)
-	print(card)
 	if not card == "":
 		get_tree().call_group("CardManager","add_card_to_next_cycle",card)
 	destruct()
