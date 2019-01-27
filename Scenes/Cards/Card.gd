@@ -22,6 +22,7 @@ export (String) var nextCardExpire = ""
 export (String) var nextCardNonExpire = ""
 
 signal send_log_msg
+signal card_info_msg
 
 
 func _ready():
@@ -38,6 +39,7 @@ func action():
 	self.next_card(nextCardNonExpire)
 
 func next_cycle():
+	print("Cycle")
 	self.current_cycle += 1
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
@@ -56,9 +58,9 @@ func next_card(card):
 	destruct()
 	
 func log_msg(msg):
-	print(msg)
-	emit_signal("send_log_msg",msg)
-	#!!! call root node to display msg / signal for msg or group
+	print(title +" sends msg : " +msg)
+	get_tree().call_group("Logger","log_msg",msg)
+
 
 func destruct():
 	self.queue_free()

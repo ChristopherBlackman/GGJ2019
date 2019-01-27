@@ -20,6 +20,9 @@ func _ready():
 	# this is an example on how to add a card 
 	print("loading")
 	$GUI/Frame/Cards.add_child(create_card(base_path))
+	
+	# this is an example for updateing all the cards for the turn
+	get_tree().call_group("Cards","next_cycle")
 
 
 func load_cards():
