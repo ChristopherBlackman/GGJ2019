@@ -1,13 +1,20 @@
 extends Control
 
 export (int) var energy = 6
+var cycle_num = 0
 var root_node = self
 var cards_ui  = null 
 var next_cycle_additions = []
 var starting_deck = [
 	'res://Scenes/Cards/Bed.tscn',
 	'res://Scenes/Cards/Bath.tscn']
-
+var increments = {
+	1 : [	'res://Scenes/Cards/Bed.tscn',
+			'res://Scenes/Cards/Bath.tscn'
+		],
+	2 : ['res://Scenes/Cards/Bath.tscn'
+		]
+}
 #------------------------------------------------------------------------------
 #
 #
@@ -23,12 +30,8 @@ func _ready():
 	# init vars
 	cards_ui = $GUI/Frame/Cards
 
-	# add cards to hand
-	for path in starting_deck:
-		print(path)
-		var res = load(path)
-		var card = res.instance()
-		cards_ui.add_child(card,true)
+
+	next_cycle()
 		
 	#reset logger	
 	get_tree().call_group("Logger","reset")
@@ -54,10 +57,21 @@ func create_card(path):
 	print(card_res)
 	var card = card_res.instance()
 	return card
+	
 
 # adds new cards to deck, simulates a cycle
 func next_cycle():
+	cycle_num = cycle_num + 1
+	print("cycle : " + str(cycle_num))
+	# next turn add
 	get_tree().call_group("Cards","next_cycle")
 	while len(next_cycle_additions) > 0:
 		cards_ui.add_child(next_cycle_additions.pop_front(),true)
+	
+	#incremental add
+	if increments.has(cycle_num):
+		print(increments[cycle_num])
+		for path in increments[cycle_num]:
+			print("Cards added : " + path)
+			cards_ui.add_child(create_card(path))
 	

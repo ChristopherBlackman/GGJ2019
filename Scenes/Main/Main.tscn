@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Logger/Logger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=3]
 
-[node name="Main" type="Control" groups=[
+[node name="Main" type="Control" index="0" groups=[
 "CardManager",
 ]]
 
