@@ -16,7 +16,8 @@ var increments = {
 	2 : ['res://Scenes/Cards/Plant.tscn'
 		],
 	3 : ['res://Scenes/Cards/Cat.tscn'],
-	4 : ['res://Scenes/Cards/Frame.tscn']
+	4 : ['res://Scenes/Cards/Frame.tscn'],
+	5 : ['res://Scenes/Cards/Toilet.tscn']
 }
 #------------------------------------------------------------------------------
 #
@@ -40,7 +41,7 @@ func _ready():
 		
 	#reset logger	
 	get_tree().call_group("Logger","reset")
-	get_tree().call_group("Logger","log_msg","You wake up\nTo Find\nMany things to do")
+	get_tree().call_group("Logger","log_msg","You wake up nTo Find Many things to do")
 	
 
 
@@ -94,6 +95,7 @@ func next_cycle():
 	cycle_num = cycle_num + 1
 	reset_energy()
 	print("cycle : " + str(cycle_num))
+	get_tree().call_group("Logger","log_msg","Day " + str(cycle_num))
 	
 	# next turn add
 	get_tree().call_group("Cards","next_cycle")

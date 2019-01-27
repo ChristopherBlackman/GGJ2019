@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Toilet.png" type="Texture" id=2]
+
+[node name="Card" instance=ExtResource( 1 )]
+
+title = "Toilet"
+about_text = "Has to be cleaned at some point."
+image = ExtResource( 2 )
+expire_log_msg = "A Festering Smell Comes From The Toilet Bowl"
+action_log_msg = "Was Not Too Bad"
+spawn_time = 1.#QNAN
+expire_time = 3
+cardExpire = "res://Scenes/Cards/DirtyToilet.tscn"
+action = "res://Scenes/Cards/Toilet.tscn"
+
+
