@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/TV.png" type="Texture" id=2]
+
+[node name="Card" index="0" instance=ExtResource( 1 )]
+
+title = "TV"
+about_text = "I Like this thing, lets me watch movies and stuff"
+image = ExtResource( 2 )
+expire_log_msg = "TV Breaks Due To Heart Break (It Wuved You)"
+action_log_msg = "You Spend Quality Time With Your TV"
+spawn_time = 1.#QNAN
+expire_time = 3
+
+
