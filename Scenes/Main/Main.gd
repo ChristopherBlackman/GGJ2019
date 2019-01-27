@@ -1,7 +1,7 @@
 extends Control
 
-export (int) var energy = 6
-export (int) var max_energy = 6
+export (int) var energy = 4
+export (int) var max_energy = 4
 var cycle_num = 0
 var root_node = self
 var cards_ui  = null 

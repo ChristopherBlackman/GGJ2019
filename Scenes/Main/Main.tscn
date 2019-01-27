@@ -1,13 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Cards/CardsHand.gd" type="Script" id=2]
-[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scenes/Logger/Logger.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/EnergyDisplay/EnergyDisplay.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Logger/Logger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/EnergyDisplay/EnergyDisplay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=5]
 
-[node name="Main" type="Control" groups=[
+[node name="Main" type="Control" index="0" groups=[
 "CardManager",
 ]]
 
@@ -22,8 +21,8 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
-energy = 6
-max_energy = 6
+energy = 4
+max_energy = 4
 
 [node name="GUI" type="MarginContainer" parent="." index="0"]
 
@@ -77,31 +76,14 @@ alignment = 0
 script = ExtResource( 2 )
 _sections_unfolded = [ "Rect", "Size Flags" ]
 
-[node name="Card" parent="GUI/Frame/Cards" index="0" instance=ExtResource( 3 )]
-
-margin_right = 50.0
-margin_bottom = 130.0
-rect_min_size = Vector2( 50, 130 )
-_sections_unfolded = [ "Margin", "Rect", "Size Flags", "Theme" ]
-spawn_time = 1.#QNAN
-expire_time = 3
-
-[node name="Card2" parent="GUI/Frame/Cards" index="1" instance=ExtResource( 3 )]
-
-margin_left = 54.0
-margin_right = 154.0
-margin_bottom = 130.0
-spawn_time = 1.#QNAN
-expire_time = 3
-
-[node name="Logger" parent="." index="1" instance=ExtResource( 4 )]
+[node name="Logger" parent="." index="1" instance=ExtResource( 3 )]
 
 margin_left = 10.0
 margin_top = 140.0
 margin_right = 825.0
 margin_bottom = 600.0
 
-[node name="EnergyDispay" parent="." index="2" instance=ExtResource( 5 )]
+[node name="EnergyDispay" parent="." index="2" instance=ExtResource( 4 )]
 
 margin_left = 850.0
 margin_top = 570.0
@@ -109,7 +91,7 @@ margin_right = 972.0
 margin_bottom = 600.0
 text = "Enthusiasm : 10"
 
-[node name="CardInfo" parent="." index="3" instance=ExtResource( 6 )]
+[node name="CardInfo" parent="." index="3" instance=ExtResource( 5 )]
 
 margin_left = 820.0
 margin_right = 1020.0
