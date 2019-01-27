@@ -63,6 +63,8 @@ func change_energy(delta):
 		get_tree().call_group("Logger","log_msg","You Faint")
 		energy = max_energy
 		next_cycle()
+	get_tree().call_group("EnergyDisplay","set_maximum_val",max_energy)
+	get_tree().call_group("EnergyDisplay","set_current_val",energy)
 	
 
 # instansiates a card from a path

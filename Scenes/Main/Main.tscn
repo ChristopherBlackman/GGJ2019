@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Main/Main.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Logger/Logger.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/EnergyDisplay/EnergyDisplay.tscn" type="PackedScene" id=4]
 
 [node name="Main" type="Control" index="0" groups=[
 "CardManager",
@@ -93,6 +94,13 @@ alignment = 0
 [node name="CardInfo" parent="GUI/Frame/View/VBoxContainer" index="1" groups=[
 "CardInfo",
 ] instance=ExtResource( 3 )]
+
+[node name="EnergyDispay" parent="GUI/Frame/View" index="1" instance=ExtResource( 4 )]
+
+margin_left = 283.0
+margin_top = 251.0
+margin_right = 283.0
+margin_bottom = 281.0
 
 [node name="Cards" type="HBoxContainer" parent="GUI/Frame" index="1"]
 
