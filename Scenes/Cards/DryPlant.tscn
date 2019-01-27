@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Pant_Dead.png" type="Texture" id=2]
+
+[node name="Card" instance=ExtResource( 1 )]
+
+title = "Dry Plant"
+about_text = "Looks like it is about to die. I should proably water it soon.\\n\\n Water"
+image = ExtResource( 2 )
+expire_log_msg = "Plant Number 1 Dies. RIP. Now I have to CLEAN Up This Shit."
+action_log_msg = "I Water my Plant, Hopefully its Still Alive"
+instant_cost = 1
+next_cost = 1
+spawn_time = 1.#QNAN
+expire_time = 3
+action = "res://Scenes/Cards/Plant.tscn"
+
+

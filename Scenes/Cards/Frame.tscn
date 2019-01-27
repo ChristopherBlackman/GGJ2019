@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/PictureFrame.png" type="Texture" id=2]
+
+[node name="Card" instance=ExtResource( 1 )]
+
+image = ExtResource( 2 )
+instant_cost = 1
+next_cost = 1
+spawn_time = 1.#QNAN
+expire_time = 3
+cardExpire = "res://Scenes/Cards/DustyFrame.tscn"
+action = "res://Scenes/Cards/Frame.tscn"
+
+

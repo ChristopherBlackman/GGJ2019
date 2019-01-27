@@ -13,8 +13,10 @@ var increments = {
 	1 : [	'res://Scenes/Cards/Bed.tscn',
 			'res://Scenes/Cards/Bath.tscn'
 		],
-	2 : ['res://Scenes/Cards/Bath.tscn'
-		]
+	2 : ['res://Scenes/Cards/Plant.tscn'
+		],
+	3 : ['res://Scenes/Cards/Cat.tscn'],
+	4 : ['res://Scenes/Cards/Frame.tscn']
 }
 #------------------------------------------------------------------------------
 #
@@ -64,8 +66,17 @@ func change_energy(delta):
 	
 	if energy <= 0:
 		get_tree().call_group("Logger","log_msg","You Faint")
-		energy = max_energy
+		reset_energy()
 		next_cycle()
+	update_energy()
+	
+	
+
+func reset_energy():
+	energy = max_energy
+	update_energy()
+
+func update_energy():
 	get_tree().call_group("EnergyDisplay","set_maximum_val",max_energy)
 	get_tree().call_group("EnergyDisplay","set_current_val",energy)
 	
@@ -81,7 +92,9 @@ func create_card(path):
 # adds new cards to deck, simulates a cycle
 func next_cycle():
 	cycle_num = cycle_num + 1
+	reset_energy()
 	print("cycle : " + str(cycle_num))
+	
 	# next turn add
 	get_tree().call_group("Cards","next_cycle")
 	while len(next_cycle_additions) > 0:
