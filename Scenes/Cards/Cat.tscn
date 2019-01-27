@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Cat.png" type="Texture" id=2]
+
+[node name="Card" instance=ExtResource( 1 )]
+
+title = "Cat"
+about_text = "Soft kitty, Warm kitty, Little ball of fur. Happy kitty, Sleepy kitty, Purr Purr Purr"
+image = ExtResource( 2 )
+expire_log_msg = "My Poor Cat Died... Guess I Forget to Feed him"
+action_log_msg = "I Feed my Adorable Cat"
+instant_cost = 1
+next_cost = 1
+spawn_time = 1.#QNAN
+expire_time = 3
+cardExpire = "res://Scenes/Cards/DeadCat.tscn"
+action = "res://Scenes/Cards/Cat.tscn"
+
+

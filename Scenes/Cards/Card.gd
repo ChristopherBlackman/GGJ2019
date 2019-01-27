@@ -54,7 +54,7 @@ func action():
 	
 # group call : increments cycle
 func next_cycle():
-	print("Cycle")
+	print("Cycle : " + self.title)
 	self.current_cycle += 1
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
