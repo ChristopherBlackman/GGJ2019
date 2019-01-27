@@ -41,7 +41,8 @@ func add_card_to_next_cycle(path):
 	var card = create_card(path)
 	next_cycle_additions.append(card)
 	print(next_cycle_additions)
-	
+
+# group call : add card immediatly into card_ui list
 func add_card_instant(path):
 	print("Card Manager Instant Addition : " + path)
 	var card = create_card(path)

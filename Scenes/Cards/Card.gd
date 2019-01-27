@@ -40,7 +40,8 @@ func _ready():
 # inherited message (may like a reminder kinda system)
 func cycle_msg():
 	return ""
-	
+
+# when agent click on button
 func action():
 	self.log_msg(action_log_msg)
 	if not instantAction == "":
@@ -49,7 +50,7 @@ func action():
 		self.next_card(action)
 	destruct()
 	
-
+# group call : increments cycle
 func next_cycle():
 	print("Cycle")
 	self.current_cycle += 1
@@ -71,10 +72,12 @@ func instant_next_card(card):
 	if not card == "":
 		get_tree().call_group("CardManager","add_card_instant",card)
 
+# sends message to logger
 func log_msg(msg):
 	print(title +" sends msg : " +msg)
 	get_tree().call_group("Logger","log_msg",msg)
 
+#sends message to card info
 func card_info_msg():
 	print(title + " sends card info")
 	get_tree().call_group("CardInfo","card_info_msg",self.title,self.about_text,self.image)
