@@ -18,3 +18,7 @@ func _ready():
 func log_msg(msg):
 	print("Logger : "+msg)
 	self.text = self.text + "\n" + msg
+
+#group call : used to reset the logger text field
+func reset():
+	self.text = ""

@@ -1,7 +1,12 @@
 extends Control
 
+export (int) var energy = 6
 var root_node = self
+var cards_ui  = null 
 var next_cycle_additions = []
+var starting_deck = [
+	'res://Scenes/Cards/Bed.tscn',
+	'res://Scenes/Cards/Bath.tscn']
 
 #------------------------------------------------------------------------------
 #
@@ -12,15 +17,23 @@ var next_cycle_additions = []
 #------------------------------------------------------------------------------
 
 func _ready():
-	# this is an example on how to add a card 
+	
 	print("loading")
 	
-	#this is an example for adding a card to the tree
-	#var base_path = "res://Scenes/Cards/Card.tscn"
-	#$GUI/Frame/Cards.add_child(create_card(base_path))
-	
-	# this is an example for updateing all the cards for the turn
-	#get_tree().call_group("Cards","next_cycle")
+	# init vars
+	cards_ui = $GUI/Frame/Cards
+
+	# add cards to hand
+	for path in starting_deck:
+		print(path)
+		var res = load(path)
+		var card = res.instance()
+		cards_ui.add_child(card,true)
+		
+	#reset logger	
+	get_tree().call_group("Logger","reset")
+	get_tree().call_group("Logger","log_msg","You wake up\nTo Find\nMany things to do")
+		
 
 #group call : cards call this to add on next cycle
 func add_card_to_next_cycle(path):
@@ -40,5 +53,5 @@ func create_card(path):
 func next_cycle():
 	get_tree().call_group("Cards","next_cycle")
 	while len(next_cycle_additions) > 0:
-		$GUI/Frame/Cards.add_child(next_cycle_additions.pop_front(),true)
+		cards_ui.add_child(next_cycle_additions.pop_front(),true)
 	
