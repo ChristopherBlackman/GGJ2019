@@ -12,5 +12,7 @@ expire_log_msg = "TV Breaks Due To Heart Break (It Wuved You)"
 action_log_msg = "You Spend Quality Time With Your TV"
 spawn_time = 1.#QNAN
 expire_time = 3
+cardExpire = "res://Scenes/Cards/TVBroken.tscn"
+action = "res://Scenes/Cards/TV.tscn"
 
 

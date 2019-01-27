@@ -17,7 +17,8 @@ var increments = {
 		],
 	3 : ['res://Scenes/Cards/Cat.tscn'],
 	4 : ['res://Scenes/Cards/Frame.tscn'],
-	5 : ['res://Scenes/Cards/Toilet.tscn']
+	5 : ['res://Scenes/Cards/Toilet.tscn'],
+	6 : ['res://Scenes/Cards/TV.tscn']
 }
 #------------------------------------------------------------------------------
 #
