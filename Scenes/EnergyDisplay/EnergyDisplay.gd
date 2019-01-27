@@ -24,7 +24,7 @@ func set_current_val(val):
 	
 func update():
 	#self.value = (current_val/maximum_val)*self.max_value
-	self.text = str(int(current_val))
+	self.text = "Enthusiasm : " +str(int(current_val))
 	
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.

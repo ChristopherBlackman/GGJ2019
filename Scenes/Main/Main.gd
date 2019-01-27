@@ -33,11 +33,15 @@ func _ready():
 
 
 	next_cycle()
+	change_energy(0)
+	
+	get_tree().call_group("CardInfo","card_info_msg","","",null)
 		
 	#reset logger	
 	get_tree().call_group("Logger","reset")
 	get_tree().call_group("Logger","log_msg","You wake up\nTo Find\nMany things to do")
-		
+	
+
 
 #group call : cards call this to add on next cycle
 func add_card_to_next_cycle(path,cost):
