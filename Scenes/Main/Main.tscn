@@ -118,8 +118,4 @@ text = "Enthusiasm : 10"
 margin_left = 820.0
 margin_right = 1020.0
 
-[connection signal="gui_input" from="GUI/Frame/Cards" to="GUI/Frame/Cards" method="_on_Cards_gui_input"]
-
-[connection signal="mouse_exited" from="GUI/Frame/Cards" to="GUI/Frame/Cards" method="_on_Cards_mouse_exited"]
-
 
