@@ -42,7 +42,7 @@ func _ready():
 		
 	#reset logger	
 	get_tree().call_group("Logger","reset")
-	get_tree().call_group("Logger","log_msg","You wake up nTo Find Many things to do")
+	get_tree().call_group("Logger","log_msg","You wake up to find many things to do")
 	
 
 
