@@ -1,12 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/CardInfo/CardInfo.gd" type="Script" id=1]
 [ext_resource path="res://Assets/SpriteSheets/Christopher_Card/Card.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Future_Narrow_24.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Scenes/Future_Narrow_16.tres" type="DynamicFont" id=4]
-[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Bath.png" type="Texture" id=5]
 
-[node name="CardInfo" type="Container" groups=[
+[node name="CardInfo" type="Container" index="0" groups=[
 "CardInfo",
 ]]
 
@@ -75,7 +74,6 @@ size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0.101563, 0, 0, 1 )
-text = "CARD TITLE"
 align = 1
 uppercase = true
 percent_visible = 1.0
@@ -107,8 +105,7 @@ visible_characters = -1
 percent_visible = 1.0
 meta_underlined = true
 tab_size = 4
-text = "A description of what this node is all about and all the things that are important with it
-"
+text = ""
 scroll_active = false
 scroll_following = true
 selection_enabled = false
@@ -123,14 +120,13 @@ anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 238.0
 margin_right = 200.0
-margin_bottom = 268.0
+margin_bottom = 238.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-texture = ExtResource( 5 )
 stretch_mode = 6
 _sections_unfolded = [ "Margin", "Rect" ]
 

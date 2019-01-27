@@ -35,7 +35,6 @@ func _ready():
 	next_cycle()
 	change_energy(0)
 	
-	get_tree().call_group("CardInfo","card_info_msg","","",null)
 		
 	#reset logger	
 	get_tree().call_group("Logger","reset")
