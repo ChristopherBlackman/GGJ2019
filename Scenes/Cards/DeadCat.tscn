@@ -6,8 +6,10 @@
 [node name="Card" instance=ExtResource( 1 )]
 
 title = "DEAD CAT"
-about_text = "MY Dead Cat. I AM HORRIBLE"
+about_text = "MY Dead Cat. I AM HORRIBLE. Gotta Bury um then"
 image = ExtResource( 2 )
+expire_log_msg = "WHY HAVE YOU NOT BURIED YOUR CAT YET"
+action_log_msg = "You bury your ... cat"
 instant_cost = 1
 next_cost = 1
 spawn_time = 1.#QNAN

@@ -5,7 +5,11 @@
 
 [node name="Card" instance=ExtResource( 1 )]
 
+title = "LOVE'ly Frame"
+about_text = "Displays My Personal LOVE of ALL things"
 image = ExtResource( 2 )
+expire_log_msg = "No More Love For the Frame"
+action_log_msg = "Nice and Clean"
 instant_cost = 1
 next_cost = 1
 spawn_time = 1.#QNAN
