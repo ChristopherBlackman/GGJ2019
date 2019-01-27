@@ -93,14 +93,10 @@ expire_time = 3
 margin_left = 54.0
 margin_right = 154.0
 margin_bottom = 130.0
-<<<<<<< HEAD
-spawn_time = 0.0
-=======
 instant_cost = 1
 next_cost = 1
 spawn_time = 1.#QNAN
 expire_time = 3
->>>>>>> a64fc752266d075219c865188ffbc9d48f57f442
 
 [node name="Logger" parent="." index="1" instance=ExtResource( 4 )]
 
