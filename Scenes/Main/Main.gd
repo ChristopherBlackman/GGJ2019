@@ -41,6 +41,11 @@ func add_card_to_next_cycle(path):
 	var card = create_card(path)
 	next_cycle_additions.append(card)
 	print(next_cycle_additions)
+	
+func add_card_instant(path):
+	print("Card Manager Instant Addition : " + path)
+	var card = create_card(path)
+	cards_ui.add_child(card,true)
 
 # instansiates a card from a path
 func create_card(path):

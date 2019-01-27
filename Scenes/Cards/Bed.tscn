@@ -10,9 +10,10 @@ script = ExtResource( 2 )
 title = "Bed"
 about_text = "Got To Sleep"
 image = ExtResource( 3 )
+expire_log_msg = ""
 action_log_msg = "You Sleep Well"
 spawn_time = 1.#QNAN
-expire_time = 2
-nextCardNonExpire = "res://Scenes/Cards/Bed.tscn"
+expire_time = 3
+action = "res://Scenes/Cards/Bed.tscn"
 
 

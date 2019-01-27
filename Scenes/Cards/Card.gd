@@ -18,8 +18,9 @@ export (int) var expire_time = 3
 var current_cycle = 1
 
 # cards that these affect
-export (String) var nextCardExpire = ""
-export (String) var nextCardNonExpire = ""
+export (String) var cardExpire = ""
+export (String) var action = ""
+export (String) var instantAction = ""
 
 #------------------------------------------------------------------------------
 #
@@ -31,8 +32,8 @@ export (String) var nextCardNonExpire = ""
 
 func _ready():
 	print("Creating : "+title)
-	print("expires : "+nextCardExpire)
-	print("action  : "+nextCardNonExpire)
+	print("expires : "+cardExpire)
+	print("action  : "+action)
 	$Picture.texture = self.image
 	pass
 
@@ -42,7 +43,12 @@ func cycle_msg():
 	
 func action():
 	self.log_msg(action_log_msg)
-	self.next_card(nextCardNonExpire)
+	if not instantAction == "":
+		self.instant_next_card(instantAction)
+	if not action == "":
+		self.next_card(action)
+	destruct()
+	
 
 func next_cycle():
 	print("Cycle")
@@ -50,7 +56,8 @@ func next_cycle():
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
 		log_msg(expire_log_msg)
-		self.next_card(nextCardExpire)
+		self.next_card(cardExpire)
+		destruct()
 	elif not msg == "" :
 		log_msg(msg)
 
@@ -59,8 +66,11 @@ func next_card(card):
 	print("next_card " + title + " : " + card)
 	if not card == "":
 		get_tree().call_group("CardManager","add_card_to_next_cycle",card)
-	destruct()
-	
+func instant_next_card(card):
+	print("instant_next_card " + title + " : " + card)
+	if not card == "":
+		get_tree().call_group("CardManager","add_card_instant",card)
+
 func log_msg(msg):
 	print(title +" sends msg : " +msg)
 	get_tree().call_group("Logger","log_msg",msg)
