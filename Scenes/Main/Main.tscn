@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/EnergyDisplay/EnergyDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=6]
 
-[node name="Main" type="Control" groups=[
+[node name="Main" type="Control" index="0" groups=[
 "CardManager",
 ]]
 
@@ -85,7 +85,7 @@ rect_min_size = Vector2( 50, 130 )
 _sections_unfolded = [ "Margin", "Rect", "Size Flags", "Theme" ]
 instant_cost = 1
 next_cost = 1
-spawn_time = 1.#QNAN
+spawn_time = 0.0
 expire_time = 3
 
 [node name="Card2" parent="GUI/Frame/Cards" index="1" instance=ExtResource( 3 )]
@@ -95,7 +95,7 @@ margin_right = 154.0
 margin_bottom = 130.0
 instant_cost = 1
 next_cost = 1
-spawn_time = 1.#QNAN
+spawn_time = 0.0
 expire_time = 3
 
 [node name="Logger" parent="." index="1" instance=ExtResource( 4 )]
