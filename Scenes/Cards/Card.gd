@@ -54,10 +54,12 @@ func action():
 	
 # group call : increments cycle
 func next_cycle():
-	print("Cycle : " + self.title)
-	self.current_cycle += 1
+	print("--------------------------------------------------")
+	print("Card : " + self.title + " at : " + str(self.current_cycle))
+	self.current_cycle = self.current_cycle + 1
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
+		print("IS THIS WORKING")
 		log_msg(expire_log_msg)
 		self.instant_next_card(cardExpire,0)
 		destruct()

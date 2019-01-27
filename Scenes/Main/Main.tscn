@@ -7,7 +7,7 @@
 [ext_resource path="res://Scenes/EnergyDisplay/EnergyDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=6]
 
-[node name="Main" type="Control" index="0" groups=[
+[node name="Main" type="Control" groups=[
 "CardManager",
 ]]
 

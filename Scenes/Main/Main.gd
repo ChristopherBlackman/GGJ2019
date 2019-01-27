@@ -15,7 +15,8 @@ var increments = {
 		],
 	2 : ['res://Scenes/Cards/Plant.tscn'
 		],
-	3 : ['res://Scenes/Cards/Cat.tscn']
+	3 : ['res://Scenes/Cards/Cat.tscn'],
+	4 : ['res://Scenes/Cards/Frame.tscn']
 }
 #------------------------------------------------------------------------------
 #
@@ -95,7 +96,7 @@ func next_cycle():
 	print("cycle : " + str(cycle_num))
 	
 	# next turn add
-
+	get_tree().call_group("Cards","next_cycle")
 	while len(next_cycle_additions) > 0:
 		cards_ui.add_child(next_cycle_additions.pop_front(),true)
 	
