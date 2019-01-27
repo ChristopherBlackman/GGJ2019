@@ -61,6 +61,9 @@ func log_msg(msg):
 	print(title +" sends msg : " +msg)
 	get_tree().call_group("Logger","log_msg",msg)
 
+func card_info_msg():
+	print(title + " sends card info")
+	get_tree().call_group("CardInfo","card_info_msg",self.title,self.about_text,self.image)
 
 func destruct():
 	self.queue_free()
@@ -69,6 +72,8 @@ func destruct():
 
 func _on_Button_mouse_entered():
 	print("Mouse Enterted")
+	card_info_msg()
+	
 	#display card on the info screen
 
 
