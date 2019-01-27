@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/DirtyBed.png" type="Texture" id=2]
+
+[node name="Card" index="0" instance=ExtResource( 1 )]
+
+title = "Messy Bed"
+image = ExtResource( 2 )
+expire_log_msg = "Bed's a Mess Jeeze"
+action_log_msg = "You Fix The Bed"
+spawn_time = 1.#QNAN
+expire_time = 3
+cardExpire = "res://Scenes/Cards/MessyBed.tscn"
+instantAction = "res://Scenes/Cards/Bed.tscn"
+
+
