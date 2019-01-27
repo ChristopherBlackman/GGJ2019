@@ -1,6 +1,7 @@
 extends Control
 
 export (int) var energy = 6
+export (int) var max_energy = 6
 var cycle_num = 0
 var root_node = self
 var cards_ui  = null 
@@ -39,17 +40,30 @@ func _ready():
 		
 
 #group call : cards call this to add on next cycle
-func add_card_to_next_cycle(path):
+func add_card_to_next_cycle(path,cost):
 	print("Card Manager Cycle Addition : " + path)
 	var card = create_card(path)
 	next_cycle_additions.append(card)
-	print(next_cycle_additions)
+	change_energy(-cost)
+
 
 # group call : add card immediatly into card_ui list
-func add_card_instant(path):
+func add_card_instant(path,cost):
 	print("Card Manager Instant Addition : " + path)
+	
 	var card = create_card(path)
 	cards_ui.add_child(card,true)
+	change_energy(-cost)
+
+func change_energy(delta):
+	energy = energy +delta
+	print("Energy Change : " + str(energy))
+	
+	if energy <= 0:
+		get_tree().call_group("Logger","log_msg","You Faint")
+		energy = max_energy
+		next_cycle()
+	
 
 # instansiates a card from a path
 func create_card(path):
@@ -70,7 +84,6 @@ func next_cycle():
 	
 	#incremental add
 	if increments.has(cycle_num):
-		print(increments[cycle_num])
 		for path in increments[cycle_num]:
 			print("Cards added : " + path)
 			cards_ui.add_child(create_card(path))

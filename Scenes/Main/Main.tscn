@@ -20,6 +20,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 energy = 6
+max_energy = 6
 
 [node name="GUI" type="MarginContainer" parent="." index="0"]
 

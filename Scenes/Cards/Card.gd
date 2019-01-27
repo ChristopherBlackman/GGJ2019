@@ -7,6 +7,8 @@ export (Texture) var image
 export (int) var cycles = 1
 export (String) var expire_log_msg = "bad event happend"
 export (String) var action_log_msg = "Card Preformed Action"
+export (int) var instant_cost = 1
+export (int) var next_cost = 1
 
 # when this card should be spawned in
 	# NAN means it is not spawnable by coincidence
@@ -45,9 +47,9 @@ func cycle_msg():
 func action():
 	self.log_msg(action_log_msg)
 	if not instantAction == "":
-		self.instant_next_card(instantAction)
+		self.instant_next_card(instantAction,instant_cost)
 	if not action == "":
-		self.next_card(action)
+		self.next_card(action,next_cost)
 	destruct()
 	
 # group call : increments cycle
@@ -57,20 +59,20 @@ func next_cycle():
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
 		log_msg(expire_log_msg)
-		self.instant_next_card(cardExpire)
+		self.instant_next_card(cardExpire,0)
 		destruct()
 	elif not msg == "" :
 		log_msg(msg)
 
 # talks to cardManager and sends next card scene for next cycle
-func next_card(card):
+func next_card(card,cost):
 	print("next_card " + title + " : " + card)
 	if not card == "":
-		get_tree().call_group("CardManager","add_card_to_next_cycle",card)
-func instant_next_card(card):
+		get_tree().call_group("CardManager","add_card_to_next_cycle",card,cost)
+func instant_next_card(card,cost):
 	print("instant_next_card " + title + " : " + card)
 	if not card == "":
-		get_tree().call_group("CardManager","add_card_instant",card)
+		get_tree().call_group("CardManager","add_card_instant",card,cost)
 
 # sends message to logger
 func log_msg(msg):
