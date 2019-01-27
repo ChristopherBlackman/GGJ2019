@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Cards/Bed.gd" type="Script" id=2]
 [ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Bed.png" type="Texture" id=3]
 
-[node name="Bed" instance=ExtResource( 1 )]
+[node name="Bed" index="0" instance=ExtResource( 1 )]
 
 script = ExtResource( 2 )
 title = "Bed"
@@ -14,6 +14,6 @@ expire_log_msg = ""
 action_log_msg = "You Sleep Well"
 spawn_time = 1.#QNAN
 expire_time = 3
-action = "res://Scenes/Cards/Bed.tscn"
+instantAction = "res://Scenes/Cards/Bed.tscn"
 
 

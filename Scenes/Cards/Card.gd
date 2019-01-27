@@ -56,7 +56,7 @@ func next_cycle():
 	var msg = cycle_msg()
 	if current_cycle >= expire_time:
 		log_msg(expire_log_msg)
-		self.next_card(cardExpire)
+		self.instant_next_card(cardExpire)
 		destruct()
 	elif not msg == "" :
 		log_msg(msg)
