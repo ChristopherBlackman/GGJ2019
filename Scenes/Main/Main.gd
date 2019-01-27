@@ -32,6 +32,7 @@ func add_card_to_next_cycle(path):
 # instansiates a card from a path
 func create_card(path):
 	var card_res = load(path)
+	print(card_res)
 	var card = card_res.instance()
 	return card
 

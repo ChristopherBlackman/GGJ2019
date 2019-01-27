@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Cards/Bed.gd" type="Script" id=2]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Bed.png" type="Texture" id=3]
+
+[node name="Bed" index="0" instance=ExtResource( 1 )]
+
+script = ExtResource( 2 )
+title = "Bed"
+about_text = "Got To Sleep"
+image = ExtResource( 3 )
+action_log_msg = "You Sleep Well"
+spawn_time = 1.#QNAN
+expire_time = 2
+nextCardNonExpire = "res://Scenes/Cards/Bed.tscn"
+
+
