@@ -9,7 +9,6 @@ func _process(delta):
 	var currX = get_global_mouse_position().x
 	var currY = get_global_mouse_position().y
 	
-	print(str(OS.get_real_window_size().x) + ", " + str(currX))
 	children = self.get_children()
 	if currX > 0 and currX < self.get_size().x and currY > 0 and currY < self.get_size().y:
 		for child in children:
