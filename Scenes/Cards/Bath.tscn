@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Cards/Card.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/SpriteSheets/Single_Images_ALL/Bath.png" type="Texture" id=2]
+
+[node name="Card" instance=ExtResource( 1 )]
+
+title = "Bath"
+about_text = "Take a Bath"
+image = ExtResource( 2 )
+spawn_time = 1.#QNAN
+
+

@@ -21,8 +21,11 @@ var current_cycle = 1
 export (String) var nextCardExpire = ""
 export (String) var nextCardNonExpire = ""
 
-func _ready():
+signal send_log_msg
 
+
+func _ready():
+	print("Creating : "+title)
 	$Picture.texture = self.image
 	pass
 
@@ -54,6 +57,7 @@ func next_card(card):
 	
 func log_msg(msg):
 	print(msg)
+	emit_signal("send_log_msg",msg)
 	#!!! call root node to display msg / signal for msg or group
 
 func destruct():
@@ -68,6 +72,7 @@ func _on_Button_mouse_entered():
 
 func _on_Button_button_down():
 	print("Card Pressed")
+	log_msg("TESTER")
 	action()
 
 
