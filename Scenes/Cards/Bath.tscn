@@ -9,6 +9,5 @@ title = "Bath"
 about_text = "Take a Bath"
 image = ExtResource( 2 )
 spawn_time = 1.#QNAN
-expire_time = 3
 
 

@@ -4,7 +4,7 @@
 [ext_resource path="res://Scenes/Cards/Card.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 
-[node name="Card" type="Button" index="0" groups=[
+[node name="Card" type="Button" groups=[
 "Cards",
 ]]
 
