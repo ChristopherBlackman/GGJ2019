@@ -40,7 +40,7 @@ action_log_msg = "Card Preformed Action"
 spawn_time = 1.#QNAN
 expire_time = 3
 nextCardExpire = ""
-nextCardNonExpire = ""
+nextCardNonExpire = "res://Scenes/Cards/Bath.tscn"
 
 [node name="Picture" type="TextureRect" parent="." index="0"]
 

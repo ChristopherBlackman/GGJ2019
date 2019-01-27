@@ -5,7 +5,9 @@
 [ext_resource path="res://Scenes/CardInfo/CardInfo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Cards/Bath.tscn" type="PackedScene" id=4]
 
-[node name="Main" type="Control" index="0"]
+[node name="Main" type="Control" groups=[
+"CardManager",
+]]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -114,7 +116,7 @@ _sections_unfolded = [ "Size Flags" ]
 margin_right = 100.0
 margin_bottom = 130.0
 spawn_time = 1.#QNAN
-expire_time = 3
+nextCardNonExpire = ""
 
 [node name="Card2" parent="GUI/Frame/Cards" index="1" instance=ExtResource( 4 )]
 
@@ -122,6 +124,6 @@ margin_left = 104.0
 margin_right = 204.0
 margin_bottom = 130.0
 spawn_time = 1.#QNAN
-expire_time = 3
+nextCardNonExpire = ""
 
 

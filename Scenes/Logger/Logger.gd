@@ -14,6 +14,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
+#group call : used to display things to log
 func log_msg(msg):
 	print("Logger : "+msg)
 	self.text = self.text + "\n" + msg

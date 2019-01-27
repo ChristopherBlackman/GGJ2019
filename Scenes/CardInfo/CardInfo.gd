@@ -14,6 +14,7 @@ func _ready():
 #	# Update game logic here.
 #	pass
 
+# group call : cards call this to display their value
 func card_info_msg(title,desc,img):
 	print("CardInfo recived : " + title)
 	$HBloc/Title.text = title

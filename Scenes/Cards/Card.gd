@@ -21,9 +21,13 @@ var current_cycle = 1
 export (String) var nextCardExpire = ""
 export (String) var nextCardNonExpire = ""
 
-signal send_log_msg
-signal card_info_msg
-
+#------------------------------------------------------------------------------
+#
+#
+#	Definitions 
+#
+#
+#------------------------------------------------------------------------------
 
 func _ready():
 	print("Creating : "+title)
@@ -50,11 +54,10 @@ func next_cycle():
 
 # talks to cardManager and sends next card scene for next cycle
 func next_card(card):
-	print("next_card")
+	print("next_card " + title + " : " + card)
 	print(card)
 	if not card == "":
-		var res = load(card)
-		#!!! call rootlnode or something !!
+		get_tree().call_group("CardManager","add_card_to_next_cycle",card)
 	destruct()
 	
 func log_msg(msg):
@@ -73,13 +76,10 @@ func destruct():
 func _on_Button_mouse_entered():
 	print("Mouse Enterted")
 	card_info_msg()
-	
-	#display card on the info screen
 
 
 func _on_Button_button_down():
 	print("Card Pressed")
-	log_msg("TESTER")
 	action()
 
 
